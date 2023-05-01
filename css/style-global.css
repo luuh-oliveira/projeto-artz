@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    height: 12vh;
+    justify-content: center;
+    background-color: #EDB91F;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    height: 82%;
+}
+
+#button_cadastro {
+    padding: 10px 20px;
+    background-color: #DFA802;
+    font-size: large;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
