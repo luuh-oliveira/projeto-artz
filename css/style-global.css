@@ -17,6 +17,7 @@
 .container {
     display: flex;
     width: 80%;
+    height: 100%;
 }
 
 .header .container {
@@ -43,4 +44,29 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 7vh;
+    background-color: #EDB91F;
+}
+
+.footer .container {
+    align-items: center;
+    justify-content: center;
+}
+
+#txt_footer {
+    font-size: medium;
+    font-weight: 300;
+    color: white;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
 }

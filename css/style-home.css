@@ -56,6 +56,11 @@
     padding-bottom: 10%;
 }
 
+.secao2 .container {
+    border-bottom: #EDB91F solid 2px;
+    padding-bottom: 5%;
+}
+
 .conteudo {
     display: flex;
     justify-content: space-between;
@@ -63,10 +68,11 @@
     height: 100%;
 }
 
-.secao2 h2 {
+.secao2 h2, .secao3 h2 {
     font-size: 2.4rem;
     font-weight: 600;
     color: #EDB91F;
+    user-select: none;
 }
 
 .secao2 .texto {
@@ -75,11 +81,12 @@
     align-items: center;
     justify-content: center;
     width: 50%;
-    gap: 5%;
+    height: 100%;
+    gap: 3%;
 }
 
 p {
-    font-size: 1.3rem;
+    font-size: 130%;
 }
 
 #button_saiba_mais {
@@ -91,6 +98,7 @@ p {
     font-size: large;
     font-weight: 400;
     cursor: pointer;
+    user-select: none;
 }
 
 .secao2 .img{
@@ -98,10 +106,24 @@ p {
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: 100%;
+    user-select: none;
 }
 
 #img_secao2 {
-    height: 90%;
+    height: auto;
+    width: 90%;
 }
 
 /* SEÇÃO 3 */
+
+.secao3 {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+.secao3 .container {
+    flex-direction: column;
+    gap: 5%;
+}
