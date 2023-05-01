@@ -17,6 +17,9 @@
 .container {
     display: flex;
     width: 80%;
+}
+
+.header .container {
     justify-content: space-between;
     align-items: center;
 }

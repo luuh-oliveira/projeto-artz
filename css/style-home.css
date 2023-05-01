@@ -1,0 +1,107 @@
+/* SEÇÃO 1 */
+
+.secao1 {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background-image: url("../img/banner-home-artz.jpg");
+    background-color: rgba(0, 0, 0, 0.527);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+}
+
+.secao1 .container, .secao2 .container {
+    flex-direction: column;
+}
+
+.secao1 .container {
+    flex-direction: column;
+    color: white;
+}
+
+.secao1 .titulo {
+    display: flex;
+    height: 45%;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.titulo h2 {
+    font-weight: 500;
+    max-width: 500px;
+}
+
+.subtitulo {
+    display: flex;
+    height: 40%;
+    align-items: center;
+    justify-content: end;
+    text-align: end;   
+}
+
+.subtitulo h3 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    max-width: 450px;
+}
+
+/* SEÇÃO 2 */
+
+.secao2 {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    padding-top: 4%;
+    padding-bottom: 10%;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.secao2 h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #EDB91F;
+}
+
+.secao2 .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 5%;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+#button_saiba_mais {
+    padding: 10px 70px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #D268CC;
+    font-size: large;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.secao2 .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#img_secao2 {
+    height: 90%;
+}
+
+/* SEÇÃO 3 */
