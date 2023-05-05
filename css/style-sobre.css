@@ -1,0 +1,43 @@
+.secao1 {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+.secao1 .container {
+    gap: 5%;
+    flex-direction: column;
+}
+
+.secao1 h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #EDB91F;
+    margin-top: 5%;
+    user-select: none;
+}
+
+.conteudo {
+    display: flex;
+    height: 80%;
+}
+
+.img_foto {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 35%;
+}
+
+.secao1 img {
+    border-radius: 130px;
+}
+
+.texto {
+    height: fit-content;
+    
+}
+
+p {
+    font-size: 130%;
+}
