@@ -1,0 +1,96 @@
+
+body {
+    background-image: url('../img/background-cadastro.jpg');
+    background-size: cover;
+}
+
+/* MODAL */
+.modal {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 3, 3, 0.451);
+}
+
+#modal_cadastro{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    margin-top: 5%;
+    padding: 40px;
+    gap: 20px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.modal h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #EDB91F;
+    user-select: none;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal .input {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal input {
+    height: 35px;
+    padding-left: 3px;
+    font-size: 0.9rem;
+    border: none;
+    border-bottom: solid black 1px;
+    outline: none;
+}
+
+.modal .select {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+select {
+    height: 35px;
+    width: 78%;
+    font-size: 0.9rem;
+    border: none;
+    border-bottom: solid black 1px;
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+}
+
+#button_cadastrar {
+    padding: 10px 20px;
+    background-color: #DFA802;
+    font-size: medium;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    outline: none; 
+    cursor: pointer;
+}
+
+#button_entrar {
+    padding: 10px 20px;
+    background-color: transparent;
+    font-size: large;
+    color: #DFA802;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+

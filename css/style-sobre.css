@@ -1,6 +1,7 @@
 .secao1 {
     display: flex;
     justify-content: center;
+    padding-top: 12vh;
     height: 90vh;
 }
 

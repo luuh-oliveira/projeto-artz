@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-global.css">
+    <link rel="stylesheet" href="./css/style-cadastro.css">
+    <link rel="website icon" type="png" href="./img/icon-logo.png">
+    <title>ArtZ | Cadastro</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <a href="">Home</a>
+            <a href="./galeria/index.html">Galeria</a>
+            <div class="logo">
+                <img src="./img/logo-artz-branco.png">
+            </div>
+            <a href="./sobre-mim.html">Sobre mim</a>
+            <a href=""><button id="button_cadastro" type="button" onclick="mostrarModal()">Faça parte!</button></a>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div id="modal_cadastro">
+            <div class="titulo">
+                <h2>Cadastre-se e fique por dentro do nosso conteúdo!</h2>
+            </div>
+            <div class="formulario">
+                <div class="input">
+                    <label for="input_nome">Nome</label>
+                    <input id="input_nome" type="text">
+                </div>
+                <div class="input">
+                    <label for="input_email">Email</label>
+                    <input id="input_email" type="email">
+                </div>
+                <div class="input">
+                    <label for="input_senha">Senha</label>
+                    <input id="input_senha" type="password">
+                </div>
+                <div class="select">
+                    <label>Estilo favorito</label>
+                    <select name="" id="select_estilo">
+                        <option value="">Selecione um estilo</option>
+                        <option value="aquarela">Aquarela</option>
+                    </select>
+                </div>
+                <div class="botoes">
+                    <button id="button_entrar">Entrar</button>
+                    <a href=""><button id="button_cadastrar">Cadastrar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p id="txt_footer">Copyright © 2023 - 2023 ArtZ. Todos os direitos reservados. | <a href=""> Termos de
+                    uso</a> | <a href="">Política de privacidade</a> | <a href="">Referências</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
