@@ -18,4 +18,20 @@ create table usuario (
 insert into estilo values 
 	(null, 'Aquarela');
     
+insert into estilo values 
+	(null, 'Arte digital'),
+	(null, 'Caricatura'),
+	(null, 'Cartoon'),
+	(null, 'Doodle art'),
+	(null, 'Mangá'),
+	(null, 'Natureza morta'),
+	(null, 'Paisagismo'),
+	(null, 'Pintura em giz/lápis de cor'),
+	(null, 'Pintura a óleo'),
+	(null, 'Realismo'),
+	(null, 'Semi realismo');
+
 select * from estilo;
+
+-- select qtde usuários que preferem cada estilo
+select count(idUsuario) from usuario where fkEstilo = 1;
