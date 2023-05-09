@@ -51,14 +51,14 @@
                     <label>Estilo favorito</label>
                     <select name="" id="select_estilo">
                         <option value="">Selecione um estilo</option>
-                        <option value="aquarela">Aquarela</option>
+                        <option value="1">Aquarela</option>
                     </select>
                 </div>
                 <div class="botoes">
                     <a href="./login.html">
                         <button class="button" id="button_entrar">Entrar</button>
                     </a>
-                    <a href=""><button class="button" id="button_cadastrar">Cadastrar</button></a>
+                    <button class="button" id="button_cadastrar" onclick="cadastrar()">Cadastrar</button>
                 </div>
             </div>
         </div>
@@ -74,3 +74,57 @@
 </body>
 
 </html>
+
+<script>
+
+    function cadastrar() {
+
+        var nomeVar = input_nome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var estiloVar = select_estilo.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || estiloVar == "") {
+            alert("Preencha todos os campos!");
+        } else {
+            // Enviando o valor do input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                    estiloServer: estiloVar
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+                    setTimeout(() => {
+                        window.location = "../../login.html";
+                    }, "2000")
+
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+        }
+
+
+    }
+
+
+</script>
