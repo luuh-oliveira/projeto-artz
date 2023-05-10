@@ -24,7 +24,14 @@
 }
 
 .header .container {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.header_links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -37,7 +44,9 @@
 
 .logo {
     display: flex;
+    width: 20%;
     height: 82%;
+    justify-content: center;
 }
 
 #button_cadastro {
