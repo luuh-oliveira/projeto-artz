@@ -10,17 +10,25 @@
     width: 77%;
 }
 
-#banner_galeria {
+.banner {
     display: flex;
     justify-content: center;
     height: 27vh;
     color: white;
-    background-image: url('../img/banner-galeria.jpg');
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.507);
     background-blend-mode: darken;
     user-select: none;
+}
+
+/* imagens dos banners */
+#banner_galeria {
+    background-image: url('../img/banner-galeria.jpg');
+}
+
+#banner_anatomia {
+    background-image: url('../img/banner-anatomia.jpg');
 }
 
 .galeria .container {
