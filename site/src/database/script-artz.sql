@@ -15,6 +15,18 @@ create table usuario (
     constraint fkEstilo foreign key (fkEstilo) references estilo(idEstilo)
 );
 
+create table secao (
+	idSecao int primary key auto_increment,
+    nome varchar(45)
+);
+
+create table comentario (
+	idComentario int primary key auto_increment,
+    fkUsuario int,
+    fkSecao int,
+    comentario text
+);
+
 insert into estilo values 
 	(null, 'Aquarela');
     
@@ -31,7 +43,22 @@ insert into estilo values
 	(null, 'Realismo'),
 	(null, 'Semi realismo');
 
+insert into secao values
+	(null, 'Anatomia'),
+	(null, 'Paisagem'),
+	(null, 'Personagens'),
+	(null, 'Realismo'),
+	(null, 'Traço e textura'),
+	(null, 'Dicas'),
+	(null, 'Materiais'),
+	(null, 'Teoria das cores'),
+	(null, 'Aquarela'),
+	(null, 'Pintura a óleo'),
+	(null, 'Pintura com giz/lápis de cor'),
+	(null, 'Estilos famosos');
+
 select * from estilo;
 
 -- select qtde usuários que preferem cada estilo
 select count(idUsuario) from usuario where fkEstilo = 1;
+

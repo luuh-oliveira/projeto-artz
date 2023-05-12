@@ -1,0 +1,95 @@
+.conteudo_body {
+    display: flex;
+    height: 100%;
+    padding-top: 12vh;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+}
+
+#banner_galeria {
+    display: flex;
+    justify-content: center;
+    height: 27vh;
+    color: white;
+    background-image: url('../img/banner-galeria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.507);
+    background-blend-mode: darken;
+    user-select: none;
+}
+
+.galeria .container {
+    display: flex;
+    align-items: center;
+    font-size: 7vh;
+    font-weight: 500;
+    width: 75%;
+}
+
+.nav_secoes {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    border-left: 2px #EDB91F solid;
+    user-select: none;
+}
+
+.container_nav {
+    display: flex;
+    flex-direction: column;
+    width: 80%; 
+    margin-top: 10%;
+}
+
+.lista{ 
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    margin-bottom: 5%;
+}
+
+.nav_secoes h3 {
+    font-size: 1.8vw;
+    font-weight: 600;
+    color: #EDB91F;
+    margin-bottom: 10%;
+}
+
+.nav_secoes h4 {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #EDB91F;
+    margin-bottom: 5%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 75%;
+}
+
+ul li{
+    margin-bottom: 5%;
+    transition: 0.2s;
+}
+
+ul li:hover, ul a:hover {
+    color: #EDB91F;
+    transition: 0.2s;
+}
+
+ul a{
+    font-size: 1.4vw;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
