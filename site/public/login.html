@@ -112,9 +112,10 @@
                         console.log(json);
                         console.log(JSON.stringify(json));
 
+                        sessionStorage.ID_USUARIO = json.idUsuario;
                         sessionStorage.EMAIL_USUARIO = json.email;
                         sessionStorage.NOME_USUARIO = json.nome;
-                        sessionStorage.ID_USUARIO = json.id;
+                        // sessionStorage.ESTILO_FAVORITO = json.fkEstilo;
 
                         setTimeout(function () {
                             window.location = "./index.html";
@@ -130,7 +131,6 @@
 
                     resposta.text().then(texto => {
                         console.error(texto);
-                        finalizarAguardar(texto);
                     });
                 }
 

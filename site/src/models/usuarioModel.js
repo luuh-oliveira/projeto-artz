@@ -21,7 +21,7 @@ function entrar(email, senha) {
 
 function cadastrar(nome, email, senha, estilo) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
-    
+
     var instrucao = `
         INSERT INTO usuario (nome, email, senha, fkEstilo) VALUES ('${nome}', '${email}', '${senha}', '${estilo}');
     `;
@@ -29,8 +29,36 @@ function cadastrar(nome, email, senha, estilo) {
     return database.executar(instrucao);
 }
 
+function comentar(idUsuario, idSecao, comentario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function comentar():", idUsuario, idSecao, comentario);
+
+    var instrucao = `
+        INSERT INTO comentario (fkUsuario, fkSecao, comentario) VALUES (${idUsuario}, ${idSecao}, '${comentario}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+
+}
+
+function carregarComentarios(idSecao) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function carregarComentarios():", idSecao);
+
+    var instrucao = `
+        SELECT comentario.*, usuario.nome 
+        FROM comentario 
+            JOIN usuario
+                ON fkUsuario = idUsuario
+            WHERE fkSecao = ${idSecao};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    comentar,
+    carregarComentarios,
 };

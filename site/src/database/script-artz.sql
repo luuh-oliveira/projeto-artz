@@ -58,7 +58,13 @@ insert into secao values
 	(null, 'Estilos famosos');
 
 select * from estilo;
+select * from comentario;
 
 -- select qtde usuários que preferem cada estilo
 select count(idUsuario) from usuario where fkEstilo = 1;
 
+SELECT comentario.*, usuario.nome 
+FROM comentario 
+	JOIN usuario
+    ON fkUsuario = idUsuario
+    WHERE fkSecao = 1;

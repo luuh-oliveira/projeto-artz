@@ -97,9 +97,64 @@ function cadastrar(req, res) {
     }
 }
 
+function comentar(req, res) {
+
+    var idUsuario = req.body.idUsuarioServer;
+    var idSecao = req.body.idSecaoServer;
+    var comentario = req.body.comentarioServer;
+
+    if (idUsuario == undefined) {
+        window.location = '../../public/login.html';
+    } else if (comentario == undefined) {
+        res.status(400).send("Comentário está indefinido!");
+    } else {
+
+        usuarioModel.comentar(idUsuario, idSecao, comentario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o comentario! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
+}
+
+function carregarComentarios(req, res) {
+
+    var idSecao = req.body.idSecaoServer;
+
+    usuarioModel.carregarComentarios(idSecao)
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    comentar,
+    carregarComentarios,
 }
