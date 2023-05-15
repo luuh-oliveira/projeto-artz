@@ -130,7 +130,7 @@ p {
     gap: 5%;
 }
 
-
+/* 
 #fade{
     position: fixed;
     top: 0;
@@ -173,4 +173,4 @@ p {
   transition: 0.5s;
   opacity: 1;
   pointer-events: all;
-}
+} */
