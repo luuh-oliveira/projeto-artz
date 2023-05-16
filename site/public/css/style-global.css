@@ -53,8 +53,7 @@
     justify-content: center;
 }
 
-#button_cadastro {
-    padding: 10px 20px;
+#button_cadastro, #button_logout {
     background-color: #DFA802;
     font-size: large;
     color: white;
@@ -62,6 +61,16 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+#button_cadastro {
+    padding: 10px 20px;
+}
+
+#button_logout {
+    padding: 10px 40px;
+}
+
+
 
 /* FOOTER */
 

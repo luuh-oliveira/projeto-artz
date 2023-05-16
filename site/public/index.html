@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="./css/style-global.css">
     <link rel="stylesheet" href="./css/style-home.css">
     <link rel="website icon" type="png" href="./img/icon-logo.png">
+    <script src="./js/funcoes.js"></script>
     <title>Artz | Home</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
 
     <div class="header">
         <div class="container">
@@ -26,7 +27,7 @@
             <div class="logo">
                 <img src="./img/logo-artz-branco.png">
             </div>
-            <div id="div_botao" class="header_links">
+            <div id="div_button" class="header_links">
                 <a class="a_link" href="./sobre-mim.html">Sobre mim</a>
                 <a href="./cadastro.html"><button id="button_cadastro">Faça parte!</button></a>
             </div>

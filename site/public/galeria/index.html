@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="../css/style-global.css">
     <link rel="stylesheet" href="../css/style-galeria-pages.css">
     <link rel="website icon" type="png" href="../img/icon-logo.png">
+    <script src="../js/funcoes.js"></script>
     <title>ArtZ | Galeria</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
 
     <div class="header">
         <div class="container">
@@ -26,7 +27,7 @@
             <div class="logo">
                 <img src="../img/logo-artz-branco.png">
             </div>
-            <div class="header_links">
+            <div id="div_button" class="header_links">
                 <a class="a_link" href="../sobre-mim.html">Sobre mim</a>
                 <a href="../cadastro.html"><button id="button_cadastro">Faça parte!</button></a>
             </div>
@@ -42,12 +43,13 @@
             </div>
             <div class="conteudo_galeria">
                 <div class="container_conteudo">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere vero libero aliquid similique
-                        unde! Labore itaque explicabo ipsam blanditiis neque quas, sed accusamus soluta id, voluptatibus
-                        excepturi delectus cupiditate perferendis.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tempora sapiente eaque
-                        quisquam dignissimos perferendis magni itaque enim autem vitae aspernatur distinctio aut alias
-                        quidem, nobis cum sed asperiores deserunt?</p>
+                    <p>Bem vindo(a) à Galeria! Nas seções ao lado, você encontrará diversos conteúdos sobre técnicas de
+                        desenho, imagens como exemplo de cada um dos temas e recursos de auxílio. Escolha uma e
+                        aproveite!
+                    </p>
+                    <p>Também é possível deixar comentários em cada seção, caso queira dizer o que achou ou compartilhar
+                        alguma dica/ideia sobre o assunto ;)
+                    </p>
                 </div>
             </div>
         </div>
