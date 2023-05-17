@@ -127,6 +127,12 @@ textarea {
     background-image: url('../img/banner-anatomia.jpg');
 }
 
+#banner_dicas {
+    background-image: url('../img/banner-dicas.jpg');
+}
+
+/* navegação */
+
 .galeria .container {
     display: flex;
     align-items: center;
