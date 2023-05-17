@@ -83,9 +83,67 @@
                         panorama geral das medidas e proporções comumente utilizadas ao desenhar corpos femininos e
                         masculinos.
                     </p>
+                    <div class="img">
+                        <img src="../img/img-proporcao-anatomia.jpg" alt="">
+                        <p class="legenda">Proporção Cabeça - Corpo</p>
+                    </div>
                     <p>
-
+                    <p>No desenho da figura humana, utiliza-se a medida da cabeça como módulo e pode-se dividir em 7
+                        partes iguais e meia, ou seja, a cabeça estabelece uma relação de proporção com tronco e as
+                        pernas, como mostra a imagem acima. Para facilitar o processo, confira a <a href="">calculadora
+                            de
+                            anatomia.</a>
                     </p>
+                    <p>Trazendo algumas características comuns ao corpo feminino, é possível observar que a cintura é
+                        geralmente mais fina em relação ao quadril e aos ombros, criando uma silhueta mais curvilínea.
+                        Os ombros tendem a ser mais suaves e menos largos em comparação aos corpos masculinos, e os
+                        quadris tendem a ser mais largos em relação aos ombros, acentuando a curva característica da
+                        região. Além disso, a linha da cintura é geralmente posicionada ligeiramente acima da metade da
+                        altura total, enquanto a linha dos ombros está alinhada com a parte superior dos braços.</p>
+                    </p>
+                    <p>
+                        Em corpos masculinos, a cintura masculina é geralmente mais ampla em relação aos quadris e aos
+                        ombros, criando uma silhueta mais retangular ou angular.Os ombros tendem a ser mais largos em
+                        comparação aos corpos femininos, criando uma aparência mais atlética, e os quadris são
+                        geralmente mais estreitos em comparação aos ombros. A linha da cintura masculina é
+                        frequentemente posicionada na metade da altura total, enquanto a linha dos ombros é mais ampla e
+                        alinhada com a parte superior dos braços.
+                    </p>
+                    <p>
+                        Você pode iniciar os seus esboços do corpo humano de forma simples, com traços e círculos nas
+                        articulações, cabeça e mãos, sem se apegar a detalhes nessa fase, apenas se atentando em buscar
+                        seguir a proproção. A imagem abaixo mostra um exemplo de corpo básico utilizando as proporções.
+                        Depois, você pode testar corpos em outras posições, como o outro desenho da imagem.
+                    </p>
+                    <div class="img">
+                        <img src="../img/img-pratica-proporcao.jpeg" alt="">
+                        <p class="legenda">Exemplo de esboço</p>
+                    </div>
+                    <p>
+                        E é com o corpo pronto que você conseguirá construir as outras características e adicionar
+                        outras coisas (como roupa, cabelo e afins) de forma muito mais fácil e coerente e dar forma ao
+                        personagem :)
+                    </p>
+                    <div class="img">
+                        <img src="../img/img-exemplo-aplicacao.jpeg" alt="">
+                        <p class="legenda">Esboço aplicando as medidas com outros elementos</p>
+                    </div>
+                    <h4>Calculadora de Anatomia</h4>
+                    <div class="calculadora">
+                        <p>Escolha uma opção: </p>
+                        <div class="radio_container">
+                            <div class="radio" onclick="carregarCampoAltura()">
+                                <input type="radio" id="radio1" name="radio-group" checked>
+                                <label for="radio1">Calcular por altura total</label>
+                            </div>
+                            <div class="radio" onclick="carregarCampoMedidaCabeca()">
+                                <input type="radio" id="radio2" name="radio-group">
+                                <label for="radio2">Calcular pela medida da cabeça</label>
+                            </div>
+                        </div>
+                        <div id="campos_calculadora">
+                        </div>
+                    </div>
                     <h2>Aplicações de medidas e proporções - Rosto</h2>
                 </div>
             </div>
@@ -129,3 +187,41 @@
 </body>
 
 </html>
+
+<script>
+
+    function carregarCampoAltura() {
+
+        campos_calculadora.innerHTML = `
+        <input class="input_calculadora" id="input_altura" type="number" min="0" placeholder="Digite aqui a altura total em cm">
+        <button onclick="calcularMedidasPorAltura()">Calcular</button>
+        `;
+
+    }
+
+    function carregarCampoMedidaCabeca() {
+        
+        campos_calculadora.innerHTML = `
+        <input class="input_calculadora" id="input_medida_cabeca" type="number" min="0" placeholder="Digite a medida da cabeça em cm">
+        <button onclick="calcularMedidasPorCabeca()">Calcular</button>
+        `;
+
+    }
+
+    function calcularMedidasPorAltura() {
+
+        var alturaTotal = Number(input_altura.value);
+        
+        if (alturaTotal <= 0) {
+            alert("Preencha o campo com um valor válido para calcular!")
+        } else {
+            
+            var parteFracionada = (0.5 * 7.5) / alturaTotal;
+            var parteNaoFracionada = alturaTotal - parteFracionada;
+            var medidaCabeca = parteNaoFracionada / 7;
+
+        }
+
+    }
+
+</script>
