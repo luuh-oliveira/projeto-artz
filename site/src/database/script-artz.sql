@@ -57,6 +57,7 @@ insert into secao values
 	(null, 'Pintura com giz/lápis de cor'),
 	(null, 'Estilos famosos');
 
+select * from usuario;
 select * from estilo;
 select * from comentario;
 
@@ -68,3 +69,10 @@ FROM comentario
 	JOIN usuario
     ON fkUsuario = idUsuario
     WHERE fkSecao = 1;
+    
+select estilo.nome,
+		count(fkEstilo) as qtdePreferencia
+	from estilo
+		join usuario
+			on idEstilo = fkEstilo
+		group by estilo.nome;

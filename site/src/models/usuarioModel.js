@@ -29,6 +29,22 @@ function cadastrar(nome, email, senha, estilo) {
     return database.executar(instrucao);
 }
 
+function obterDadosAoCarregar() {
+
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function obterDadosAoCarregar()");
+    var instrucao = `
+        select estilo.nome,
+        count(fkEstilo) as qtdePreferencia 
+        from estilo
+        join usuario
+            on idEstilo = fkEstilo
+        group by estilo.nome;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+
+}
+
 function comentar(idUsuario, idSecao, comentario) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function comentar():", idUsuario, idSecao, comentario);
 
@@ -61,4 +77,5 @@ module.exports = {
     listar,
     comentar,
     carregarComentarios,
+    obterDadosAoCarregar,
 };

@@ -11,6 +11,10 @@ router.get("/listar", function (req, res) {
     usuarioController.listar(req, res);
 });
 
+router.get("/obterDadosAoCarregar", function (req, res) {
+    usuarioController.obterDadosAoCarregar(req, res);
+});
+
 router.post("/carregarComentarios", function (req, res) {
     usuarioController.carregarComentarios(req, res);
 });
