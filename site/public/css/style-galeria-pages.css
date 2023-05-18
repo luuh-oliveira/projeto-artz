@@ -100,6 +100,7 @@
 #campos_calculadora {
     display: flex;
     justify-content: center;
+    gap: 3%;
     margin-top: 10px;
 }
 
@@ -109,6 +110,16 @@
     border: 1px solid #EDB91F;
     border-radius: 8px;
     font-size: 1.2vw;
+}
+
+.calculadora select {
+    font-size: 0.9rem;
+    width: 40%;
+    /* margin-left: 15px;
+    margin-right: 5%; */
+    border: none;
+    border-bottom: solid rgb(128, 127, 127) 1px;
+    outline: none;
 }
 
 .calculadora button {

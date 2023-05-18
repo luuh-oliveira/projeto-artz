@@ -64,12 +64,14 @@ select * from comentario;
 -- select qtde usuários que preferem cada estilo
 select count(idUsuario) from usuario where fkEstilo = 1;
 
+-- select comentários de cada seção
 SELECT comentario.*, usuario.nome 
 FROM comentario 
 	JOIN usuario
     ON fkUsuario = idUsuario
     WHERE fkSecao = 1;
     
+-- select estilos que já foram escolhidos e quantos usuários os escolheram
 select estilo.nome,
 		count(fkEstilo) as qtdePreferencia
 	from estilo

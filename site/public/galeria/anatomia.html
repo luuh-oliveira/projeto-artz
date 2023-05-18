@@ -190,19 +190,29 @@
 
 <script>
 
+    var htmlSelectTipoCorpo = `
+    <select id="select_tipo_corpo">
+        <option value="">Selecione um tipo de corpo</option>
+        <option value="f">Feminino</option>
+        <option value="m">Masculino</option>
+    </select>
+    `;
+
     function carregarCampoAltura() {
 
         campos_calculadora.innerHTML = `
         <input class="input_calculadora" id="input_altura" type="number" min="0" placeholder="Digite aqui a altura total em cm">
+        ${htmlSelectTipoCorpo}
         <button onclick="calcularMedidasPorAltura()">Calcular</button>
         `;
 
     }
 
     function carregarCampoMedidaCabeca() {
-        
+
         campos_calculadora.innerHTML = `
         <input class="input_calculadora" id="input_medida_cabeca" type="number" min="0" placeholder="Digite a medida da cabeça em cm">
+        ${htmlSelectTipoCorpo}
         <button onclick="calcularMedidasPorCabeca()">Calcular</button>
         `;
 
@@ -211,14 +221,29 @@
     function calcularMedidasPorAltura() {
 
         var alturaTotal = Number(input_altura.value);
-        
-        if (alturaTotal <= 0) {
-            alert("Preencha o campo com um valor válido para calcular!")
+        var tipoCorpo = select_tipo_corpo.value;
+
+        if (alturaTotal <= 0 || tipoCorpo == "") {
+            alert("Preencha os campos com um valor válido para calcular!")
         } else {
-            
+
             var parteFracionada = (0.5 * 7.5) / alturaTotal;
             var parteNaoFracionada = alturaTotal - parteFracionada;
             var medidaCabeca = parteNaoFracionada / 7;
+            var comprimentoQueixoUmbigo = medidaCabeca * 2;
+            var comprimentoUmbigoPerna = parteFracionada; 
+            var comprimentoTotalBraco = medidaCabeca * 3.5;
+            var parteBraco1 = medidaCabeca * 1.5;
+            var parteBraco2 = medidaCabeca;
+            var comprimentoMao = medidaCabeca;
+            var comprimentoPerna = medidaCabeca * 4;
+            var larguraOmbro = 0;
+
+            if (tipoCorpo == "f") {
+                larguraOmbro = medidaCabeca * 1.5;
+            } else {
+                larguraOmbro = medidaCabeca * 2;
+            }
 
         }
 
