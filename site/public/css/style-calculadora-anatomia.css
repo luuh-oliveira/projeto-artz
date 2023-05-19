@@ -1,0 +1,85 @@
+/* calculadora */
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+#titulo_calculadora {
+    font-size: 1.7vw;
+    margin-top: 3%;
+}
+
+.radio_container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.radio {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#campos_calculadora {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 10px;
+}
+
+.input_calculadora {
+    width: 38%;
+    padding: 10px;
+    border: 1px solid #EDB91F;
+    border-radius: 8px;
+    font-size: 1.2vw;
+}
+
+.calculadora select {
+    font-size: 0.9rem;
+    width: 40%;
+    border: none;
+    border-bottom: solid rgb(128, 127, 127) 1px;
+    outline: none;
+}
+
+.calculadora button {
+    padding: 10px 15px;
+    font-size: 1.2vw;
+    font-weight: 600;
+    background-color: #DFA802;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+.calculadora button:hover { 
+    background-color: transparent;
+    color: #DFA802;
+    border: 1px solid #DFA802;
+    transition: 0.3s;
+}
+
+#div_resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#div_resultado .p_titulo {
+    margin-top: 5px;
+}
+
+#div_resultado li {
+    font-size: 1.3vw;
+    list-style: inside;
+}

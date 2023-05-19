@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../css/style-global.css">
     <link rel="stylesheet" href="../css/style-galeria-pages.css">
+    <link rel="stylesheet" href="../css/style-calculadora-anatomia.css">
     <link rel="website icon" type="png" href="../img/icon-logo.png">
     <script src="../js/funcoes.js"></script>
     <title>ArtZ | Anatomia</title>
@@ -128,7 +129,7 @@
                         <img src="../img/img-exemplo-aplicacao.jpeg" alt="">
                         <p class="legenda">Esboço aplicando as medidas com outros elementos</p>
                     </div>
-                    <h4>Calculadora de Anatomia</h4>
+                    <h4 id="titulo_calculadora">Calculadora de Anatomia</h4>
                     <div class="calculadora">
                         <p>Escolha uma opção: </p>
                         <div class="radio_container">
@@ -143,8 +144,18 @@
                         </div>
                         <div id="campos_calculadora">
                         </div>
+                        <div id="div_resultado">
+                        </div>
                     </div>
                     <h2>Aplicações de medidas e proporções - Rosto</h2>
+                    <div class="comentarios">
+                        <h3>Comentários</h3>
+                        <div class="comentario_box">
+                            <textarea id="input_comentario"></textarea>
+                            <button onclick="comentar(idSecao)">Comentar</button>
+                        </div>
+                        <div id="div_comentarios"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,6 +201,10 @@
 
 <script>
 
+    var idSecao = 1;
+
+    carregarComentarios(idSecao);
+
     var htmlSelectTipoCorpo = `
     <select id="select_tipo_corpo">
         <option value="">Selecione um tipo de corpo</option>
@@ -230,13 +245,15 @@
             var parteFracionada = (0.5 * 7.5) / alturaTotal;
             var parteNaoFracionada = alturaTotal - parteFracionada;
             var medidaCabeca = parteNaoFracionada / 7;
-            var comprimentoQueixoUmbigo = medidaCabeca * 2;
-            var comprimentoUmbigoPerna = parteFracionada; 
-            var comprimentoTotalBraco = medidaCabeca * 3.5;
-            var parteBraco1 = medidaCabeca * 1.5;
-            var parteBraco2 = medidaCabeca;
+            var comprimentoTronco = medidaCabeca * 2;
+            var comprimentoBraco = medidaCabeca * 1.5;
+            var comprimentoAntebraco = medidaCabeca;
             var comprimentoMao = medidaCabeca;
-            var comprimentoPerna = medidaCabeca * 4;
+            var comprimentoTotalBraco = comprimentoBraco + comprimentoAntebraco + comprimentoMao;
+            var comprimentoUmbigoPerna = parteFracionada;
+            var comprimentoPerna = medidaCabeca * 3.5;
+            var comprimentoAteJoelho = medidaCabeca * 2;
+            var comprimentoPe = parteFracionada;
             var larguraOmbro = 0;
 
             if (tipoCorpo == "f") {
@@ -245,8 +262,79 @@
                 larguraOmbro = medidaCabeca * 2;
             }
 
-        }
+            div_resultado.innerHTML = `
+                <h3>Medidas</h3>
+                <p>Comprimento do rosto: ${medidaCabeca.toFixed(1)} cm</p>
+                <p>Comprimento do tronco (queixo ao umbigo): ${comprimentoTronco.toFixed(1)} cm</p>
+                <p>Largura do ombro: ${larguraOmbro.toFixed(1)} cm</p>
+                <p class="p_titulo">Comprimento do braço</p>
+                <ul>
+                    <li>Comprimento total: ${comprimentoTotalBraco.toFixed(1)} cm</li>
+                    <li>Comprimento do braço: ${comprimentoBraco.toFixed(1)} cm</li>
+                    <li>Comprimento do antebraço: ${comprimentoAntebraco.toFixed(1)} cm</li>
+                    <li>Comprimento da mão: ${comprimentoMao.toFixed(1)} cm</li>
+                </ul>
+                <p class="p_titulo">Comprimento da parte inferior</p>
+                <ul>
+                    <li>Comprimento total da perna: ${comprimentoPerna.toFixed(1)} cm</li>
+                    <li>Comprimento da coxa (até o joelho): ${comprimentoAteJoelho.toFixed(1)} cm</li>
+                    <li>Comprimento do pé: ${comprimentoPe.toFixed(1)} cm</li>
+                </ul>
+            `;
 
+        }
     }
+
+    function calcularMedidasPorCabeca() {
+
+        var medidaCabeca = Number(input_medida_cabeca.value);
+        var tipoCorpo = select_tipo_corpo.value;
+
+        if (medidaCabeca <= 0 || tipoCorpo == "") {
+            alert("Preencha os campos com um valor válido para calcular!")
+        } else {
+
+            var alturaTotal = medidaCabeca * 7.5;
+            var parteFracionada = medidaCabeca * 0.5;
+            var comprimentoTronco = medidaCabeca * 2;
+            var comprimentoBraco = medidaCabeca * 1.5;
+            var comprimentoAntebraco = medidaCabeca;
+            var comprimentoMao = medidaCabeca;
+            var comprimentoTotalBraco = comprimentoBraco + comprimentoAntebraco + comprimentoMao;
+            var comprimentoUmbigoPerna = parteFracionada;
+            var comprimentoPerna = medidaCabeca * 3.5;
+            var comprimentoAteJoelho = medidaCabeca * 2;
+            var comprimentoPe = parteFracionada;
+            var larguraOmbro = 0;
+
+            if (tipoCorpo == "f") {
+                larguraOmbro = medidaCabeca * 1.5;
+            } else {
+                larguraOmbro = medidaCabeca * 2;
+            }
+
+            div_resultado.innerHTML = `
+                <h3>Medidas</h3>
+                <p>Altura Total: ${alturaTotal.toFixed(1)} cm</p>
+                <p>Comprimento do tronco (queixo ao umbigo): ${comprimentoTronco.toFixed(1)} cm</p>
+                <p>Largura do ombro: ${larguraOmbro.toFixed(1)} cm</p>
+                <p class="p_titulo">Comprimento do braço</p>
+                <ul>
+                    <li>Comprimento total: ${comprimentoTotalBraco.toFixed(1)} cm</li>
+                    <li>Comprimento do braço: ${comprimentoBraco.toFixed(1)} cm</li>
+                    <li>Comprimento do antebraço: ${comprimentoAntebraco.toFixed(1)} cm</li>
+                    <li>Comprimento da mão: ${comprimentoMao.toFixed(1)} cm</li>
+                </ul>
+                <p class="p_titulo">Comprimento da parte inferior</p>
+                <ul>
+                    <li>Comprimento total da perna: ${comprimentoPerna.toFixed(1)} cm</li>
+                    <li>Comprimento da coxa (até o joelho): ${comprimentoAteJoelho.toFixed(1)} cm</li>
+                    <li>Comprimento do pé: ${comprimentoPe.toFixed(1)} cm</li>
+                </ul>
+            `;
+
+        }
+    }
+
 
 </script>

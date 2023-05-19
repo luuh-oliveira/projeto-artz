@@ -54,11 +54,6 @@
     user-select: none;
 }
 
-.container_conteudo h4 {
-    font-size: 1.7vw;
-    margin-top: 3%;
-}
-
 .img {
     display: flex;
     flex-direction: column;
@@ -75,79 +70,12 @@
     margin-top: 8px;
 }
 
-/* calculadora */
-
-.calculadora {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 15px;
-}
-
-.radio_container {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10px;
-}
-
-.radio {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-#campos_calculadora {
-    display: flex;
-    justify-content: center;
-    gap: 3%;
-    margin-top: 10px;
-}
-
-.input_calculadora {
-    width: 38%;
-    padding: 10px;
-    border: 1px solid #EDB91F;
-    border-radius: 8px;
-    font-size: 1.2vw;
-}
-
-.calculadora select {
-    font-size: 0.9rem;
-    width: 40%;
-    /* margin-left: 15px;
-    margin-right: 5%; */
-    border: none;
-    border-bottom: solid rgb(128, 127, 127) 1px;
-    outline: none;
-}
-
-.calculadora button {
-    padding: 10px 15px;
-    font-size: 1.2vw;
-    font-weight: 600;
-    background-color: #DFA802;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    transition: 0.3s;
-    margin-left: 1%;
-    cursor: pointer;
-}
-
-.calculadora button:hover { 
-    background-color: transparent;
-    color: #DFA802;
-    border: 1px solid #DFA802;
-    transition: 0.3s;
-}
-
 /* comentários */
 
 .comentarios {
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
 }
 
 .comentario_box {
@@ -189,7 +117,6 @@ textarea {
     display: flex;
     flex-direction: column;
     margin-top: 3%;
-    margin-bottom: 5%;
 }
 
 .publicacao {
@@ -216,6 +143,10 @@ textarea {
 
 #banner_anatomia {
     background-image: url('../img/banner-anatomia.jpg');
+}
+
+#banner_paisagem {
+    background-image: url('../img/banner-paisagem.jpg');
 }
 
 #banner_dicas {
@@ -271,25 +202,25 @@ textarea {
     margin-bottom: 5%;
 }
 
-ul {
+.nav_secoes ul {
     display: flex;
     flex-direction: column;
     align-self: center;
     width: 75%;
 }
 
-ul li{
+.nav_secoes ul li{
     width: fit-content;
     margin-bottom: 5%;
     transition: 0.2s;
 }
 
-ul li:hover, ul a:hover {
+.nav_secoes ul li:hover, .nav_secoes ul a:hover {
     color: #EDB91F;
     transition: 0.2s;
 }
 
-ul a{
+.nav_secoes ul a{
     font-size: 1.4vw;
     text-decoration: none;
     color: black;

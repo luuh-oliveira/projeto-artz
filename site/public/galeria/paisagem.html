@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="../css/style-global.css">
     <link rel="stylesheet" href="../css/style-galeria-pages.css">
     <link rel="website icon" type="png" href="../img/icon-logo.png">
-    <title>ArtZ | Paisagem</title>
+    <script src="../js/funcoes.js"></script>
+    <title>ArtZ | Anatomia</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
 
     <div class="header">
         <div class="container">
@@ -26,7 +27,7 @@
             <div class="logo">
                 <img src="../img/logo-artz-branco.png">
             </div>
-            <div class="header_links">
+            <div id="div_button" class="header_links">
                 <a class="a_link" href="../sobre-mim.html">Sobre mim</a>
                 <a href="../cadastro.html"><button id="button_cadastro">Faça parte!</button></a>
             </div>
@@ -36,33 +37,69 @@
     <div class="conteudo_body">
         <div class="galeria">
             <div id="banner_paisagem" class="banner">
-                <h2>Paisagem</h2>
+                <div class="container">
+                    <p>Paisagem</p>
+                </div>
             </div>
             <div class="conteudo_galeria">
-                <p></p>
+                <div class="container_conteudo">
+                    <p></p>
+                    <div class="comentarios">
+                        <h3>Comentários</h3>
+                        <div class="comentario_box">
+                            <textarea id="input_comentario"
+                              ></textarea>
+                            <button onclick="comentar(idSecao)">Comentar</button>
+                        </div>
+                        <div id="div_comentarios"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="nav_secoes">
-            <h3>Escolha uma seção</h3>
-            <div class="lista">
-                <h4>Desenho</h4>
-                <ul>
-                    <li>Paisagem</li>
-                    <li>Anatomia</li>
-                    <li>Personagens</li>
-                    <li>Realismo</li>
-                </ul>
-            </div>
-            <div class="lista">
-                <h4>Pintura</h4>
-                <ul>
-                    <li></li>
-                </ul>
+            <div class="container_nav">
+                <h3>Escolha uma seção</h3>
+                <div class="lista">
+                    <h4>Desenho</h4>
+                    <ul>
+                        <li><a href="./anatomia.html">Anatomia</a></li>
+                        <li><a href="./paisagem.html">Paisagem</a></li>
+                        <li><a href="./personagens.html">Personagens</a></li>
+                        <li><a href="./realismo.html">Realismo</a></li>
+                        <li><a href="./traco_textura.html">Traço e textura</a></li>
+                        <li><a href="./dicas.html">Dicas</a></li>
+                    </ul>
+                </div>
+                <div class="lista">
+                    <h4>Pintura</h4>
+                    <ul>
+                        <li><a href="./materiais.html">Materiais</a></li>
+                        <li><a href="./teoria_cores.html">Teoria das cores</a></li>
+                        <li><a href="./aquarela.html">Aquarela</a></li>
+                        <li><a href="./pintura_oleo.html">Pintura a óleo</a></li>
+                        <li><a href="./pintura_giz_lapis.html">Pintura com giz/lápis de cor</a></li>
+                        <li><a href="./estilos.html">Estilos famosos</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="footer">
+        <div class="container">
+            <p id="txt_footer">Copyright © 2023 - 2023 ArtZ. Todos os direitos reservados. | <a href=""> Termos de
+                    uso</a> | <a href="">Política de privacidade</a> | <a href="">Referências</a></p>
+        </div>
+    </div>
 
 </body>
 
 </html>
+
+<script>
+
+    var idSecao = 2;
+    
+    carregarComentarios(idSecao);
+
+</script>

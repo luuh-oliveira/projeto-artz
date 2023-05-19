@@ -14,7 +14,7 @@ function carregarComentarios(idSecao) {
                 if (resposta.status == 204) {
                     var feed = document.getElementById("div_comentarios");
                     var mensagem = document.createElement("span");
-                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    mensagem.innerHTML = "Ainda não foi feito nenhum comentário."
                     feed.appendChild(mensagem);
                     throw "Nenhum resultado encontrado!!";
                 }
