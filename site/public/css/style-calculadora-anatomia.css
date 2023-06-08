@@ -25,6 +25,10 @@
     gap: 8px;
 }
 
+.radio, .radio_container label{
+    cursor: pointer;
+}
+
 #campos_calculadora {
     display: flex;
     justify-content: center;

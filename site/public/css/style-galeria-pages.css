@@ -42,7 +42,7 @@
     margin-top: 35px;
 }
 
-.container_conteudo p {
+.container_conteudo p, .topicos li {
     font-size: 1.4vw;
 }
 
@@ -52,6 +52,11 @@
     color: #EDB91F;
     margin-bottom: 15px;
     user-select: none;
+}
+
+.topicos li {
+    list-style: inside;
+    margin-bottom: 10px;
 }
 
 .img {
@@ -154,6 +159,11 @@ textarea {
 #banner_dicas {
     background-image: url('../img/banner-dicas.jpg');
 }
+
+#banner_teoria_cores {
+    background-image: url('../img/banner-teoria-cores.jpg');
+}
+
 
 /* navegação */
 

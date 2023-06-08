@@ -235,6 +235,11 @@
 
     var idSecao = 1;
 
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
+    for (var i = 0; i < radioButtons.length; i++) {
+        radioButtons[i].checked = false;
+    }
+
     carregarComentarios(idSecao);
 
     var htmlSelectTipoCorpo = `
