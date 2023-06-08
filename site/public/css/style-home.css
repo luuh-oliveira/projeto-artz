@@ -136,5 +136,8 @@ p {
 }
 
 .grafico {
+    display: flex;
+    width: 80%;
+    align-self: center;
     margin-top: 5vh;
 }

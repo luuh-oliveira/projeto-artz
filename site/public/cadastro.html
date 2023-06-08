@@ -98,23 +98,26 @@
         var senha = input_senha.value;
 
         var emailUsuarioValidado = (email.indexOf("@") != -1) && (email.indexOf(".") != -1);
-        var senhaForteValidada = senha.lenght >= 8 &&
+        var caracteresValidados =
             (senha.indexOf("!") != -1 ||
-                senha.indexOf("@") != -1 ||
-                senha.indexOf("#") != -1 ||
-                senha.indexOf("$") != -1 ||
-                senha.indexOf("%") != -1 ||
-                senha.indexOf("&") != -1 ||
-                senha.indexOf("|") != 1 ||
-                senha.indexOf("*") != 1 ||
-                senha.indexOf("_") != 1);
+            senha.indexOf("@") != -1 ||
+            senha.indexOf("#") != -1 ||
+            senha.indexOf("$") != -1 ||
+            senha.indexOf("%") != -1 ||
+            senha.indexOf("&") != -1 ||
+            senha.indexOf("|") != -1 ||
+            senha.indexOf("*") != -1 ||
+            senha.indexOf("_") != -1);
+
+        var senhaForteValidada = senha.length >= 8 && caracteresValidados;
 
         if (emailUsuarioValidado && senhaForteValidada) {
             return true;
         } else {
             if (!emailUsuarioValidado) {
                 alert("Insira um email válido!");
-            } else if (!senhaForteValidada) {
+            }
+            else if (!senhaForteValidada) {
                 alert("Sua senha deve ter no mínimo 8 caracteres, e algum caractere especial (! * @ # $ % & | _)");
             }
             return false;
@@ -133,7 +136,6 @@
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || estiloVar == "") {
             alert("Preencha todos os campos!");
         } else {
-            // Enviando o valor do input
 
             if (validarCampos()) {
 
@@ -143,8 +145,6 @@
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        // crie um atributo que recebe o valor recuperado aqui
-                        // Agora vá para o arquivo routes/usuario.js
                         nomeServer: nomeVar,
                         emailServer: emailVar,
                         senhaServer: senhaVar,

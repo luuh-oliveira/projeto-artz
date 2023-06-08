@@ -180,6 +180,49 @@
             config
         );
 
+        console.log("Tá no plotar gráficos")
+
+        proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 3000);
+
     }
+
+
+    function atualizarGrafico(dados, myChart) {
+
+        console.log("tá no atualizar gráficos")
+
+        fetch(`/usuarios/obterDadosAoCarregar`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (dadosAtualizados) {
+
+                    console.log(`Dados recebidos: ${JSON.stringify(dadosAtualizados)}`);
+                    console.log(`Dados atuais do gráfico:`);
+                    console.log(dados);
+
+                    dados.labels = [];
+                    dados.datasets[0].data = [];
+
+                    for (i = 0; i < dadosAtualizados.length; i++) {
+                        var estilo = dadosAtualizados[i];
+                        dados.labels.push(estilo.nome);
+                        dados.datasets[0].data.push(estilo.qtdePreferencia);
+                    }
+
+                    myChart.update();
+
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 3000);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, myChart), 3000);
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
 
 </script>
