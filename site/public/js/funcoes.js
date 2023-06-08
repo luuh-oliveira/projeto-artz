@@ -123,10 +123,14 @@ function validarSessao() {
         
         var botaoCadastro = document.getElementById("button_cadastro");
         var divBotao = document.getElementById("div_button");
-        
+        var spanNomeUsuario = document.getElementById("span_username");
+
+        var primeiroNome = nome.split(" ")[0];
+
         botaoCadastro.style.display = "none";
 
-        divBotao.innerHTML += `<button id="button_logout" onclick="limparSessao()">Sair</button>`
+        divBotao.innerHTML += `<button id="button_logout" onclick="limparSessao()">Sair</button>`;
+        spanNomeUsuario.innerHTML = ` ${primeiroNome}`;
 
     } 
 }
