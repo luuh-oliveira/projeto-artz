@@ -78,3 +78,10 @@ select estilo.nome,
 		join usuario
 			on idEstilo = fkEstilo
 		group by estilo.nome;
+        
+select count(idComentario) as qtdeComentarios, 
+		secao.nome as nomeSecao 
+	from comentario
+	join secao
+		on idSecao = fkSecao
+	group by fkSecao;
