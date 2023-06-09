@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style-global.css">
+    <link rel="stylesheet" href="../css/style-galeria-pages.css">
+    <link rel="website icon" type="png" href="../img/icon-logo.png">
+    <script src="../js/funcoes.js"></script>
+    <title>ArtZ | Realismo</title>
+</head>
+
+<body onload="validarSessao()">
+
+    <div class="header">
+        <div class="container">
+            <div class="header_links">
+                <a class="a_link" href="../index.html">Home</a>
+                <a class="a_link" href="./index.html">Galeria</a>
+            </div>
+            <div class="logo">
+                <img src="../img/logo-artz-branco.png">
+            </div>
+            <div id="div_button" class="header_links">
+                <a class="a_link" href="../sobre-mim.html">Sobre mim</a>
+                <a href="../cadastro.html"><button id="button_cadastro">Faça parte!</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="conteudo_body">
+        <div class="galeria">
+            <div id="banner_realismo" class="banner">
+                <div class="container">
+                    <p>Realismo</p>
+                </div>
+            </div>
+            <div class="conteudo_galeria">
+                <div class="container_conteudo">
+
+                    <p>O realismo é um estilo artístico que busca representar o mundo de forma precisa e fiel à
+                        realidade. No contexto do desenho, o realismo é a habilidade de criar imagens que se assemelham
+                        tanto quanto possível ao que vemos com nossos olhos. Essa técnica envolve capturar detalhes
+                        minuciosos, texturas, sombras e nuances de cor de forma precisa. Particularmente falando, não
+                        tenho muita experiência nesse estilo, mas algo que definitivamente é muito importante é a
+                        prática. E provavelmente vai levar tempo até que você consiga pegar o jeito se for iniciar no
+                        realismo agora, mas o importante é não desistir! Aqui vou trazer um pouco de algumas dicas que
+                        já recebi para quem quer seguir por esse caminho ao desenhar.
+                    </p>
+
+                    <h2>Como começar?</h2>
+                    <p>Para criar desenhos realistas, é importante dominar algumas técnicas e princípios fundamentais.
+                        Aqui estão alguns passos que podem ajudá-lo a desenvolver suas habilidades nessa área:
+                    </p>
+
+                    <ul class="topicos">
+                        <li>Observação atenta: A observação é a base do realismo. Treine seu olhar para capturar os
+                            detalhes da forma, proporção, textura e luz ao seu redor. Dedique tempo para estudar os
+                            objetos, as pessoas e a natureza, observando como a luz incide sobre eles e cria sombras e
+                            destaques.</li>
+
+                        <li>Esboço inicial: Comece com um esboço básico do que deseja desenhar. Use linhas leves e
+                            soltas para mapear a forma geral e a proporção do objeto. Não se preocupe com detalhes nessa
+                            fase inicial.</li>
+
+                        <li>Estudo de valores: Entenda os valores tonais, que se referem aos diferentes graus de
+                            luminosidade de um objeto. Observe as áreas mais escuras e claras e os tons intermediários.
+                            Use diferentes técnicas, como hachuras, esfumados ou pontilhismo, para representar essas
+                            variações tonais em seu desenho.</li>
+
+                        <div class="img">
+                            <img src="../img/img-observacao-realismo.jpg" alt="">
+                            <p class="legenda">Exemplo de observação de objetos com luz e sombra</p>
+                        </div>
+
+                        <li>Domínio de texturas: As texturas desempenham um papel importante no realismo. Estude e
+                            pratique a criação de diferentes texturas, como pele, cabelo, tecido ou superfícies ásperas.
+                            Utilize técnicas de sombreamento adequadas para transmitir a sensação tátil dessas texturas
+                            (para saber mais, consulte a seção Traço e textura da Galeria).
+                        </li>
+
+                        <li>Uso de referências: Trabalhar com referências visuais pode ser muito útil para alcançar um
+                            alto nível de realismo. Fotografias de alta qualidade ou objetos reais podem servir como
+                            guias para capturar detalhes e nuances com precisão. Observe as cores, sombras e reflexos
+                            presentes nas referências e tente recriá-los em seu desenho.</li>
+
+                        <li>Paciência e pacote de camadas: O realismo exige tempo e paciência. Trabalhe em camadas,
+                            começando com um esboço básico e adicionando gradualmente detalhes, sombras e texturas.
+                            Construa seu desenho de forma gradual, concentrando-se em uma área de cada vez e trabalhando
+                            com cuidado nos detalhes.</li>
+
+                        <li>Utilização de materiais adequados: Escolha os materiais certos para obter os resultados
+                            desejados. Lápis de grafite, lápis de cor, carvão, pastel ou até mesmo técnicas de pintura
+                            podem ser usados para criar desenhos realistas. Experimente diferentes ferramentas e
+                            descubra aquelas com as quais você se sente mais confortável.</li>
+                    </ul>
+
+                    <div class="img">
+                        <img src="../img/img-exemplo-realismo.jpeg" alt="">
+                        <p class="legenda">Exemplo de desenho realista (um dos meus favoritos)</p>
+                    </div>
+
+                    <p>Momento do lembrete de cada seção: o realismo é um processo contínuo de aprendizado e prática. Não tenha medo de
+                        cometer erros e continue explorando e experimentando novas técnicas :)
+                    </p>
+
+                    <div class="comentarios">
+                        <h3>Comentários</h3>
+                        <div class="comentario_box">
+                            <textarea id="input_comentario"></textarea>
+                            <button onclick="comentar(idSecao)">Comentar</button>
+                        </div>
+                        <div id="div_comentarios"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav_secoes">
+            <div class="container_nav">
+                <h3>Escolha uma seção</h3>
+                <div class="lista">
+                    <h4>Desenho</h4>
+                    <ul>
+                        <li><a href="./anatomia.html">Anatomia</a></li>
+                        <li><a href="./paisagem.html">Paisagem</a></li>
+                        <li><a href="./personagens.html">Personagens</a></li>
+                        <li><a href="./realismo.html">Realismo</a></li>
+                        <li><a href="./traco_textura.html">Traço e textura</a></li>
+                        <li><a href="./dicas.html">Dicas</a></li>
+                    </ul>
+                </div>
+                <div class="lista">
+                    <h4>Pintura</h4>
+                    <ul>
+                        <li><a href="./materiais.html">Materiais</a></li>
+                        <li><a href="./teoria_cores.html">Teoria das cores</a></li>
+                        <li><a href="./aquarela.html">Aquarela</a></li>
+                        <li><a href="./pintura_oleo.html">Pintura a óleo</a></li>
+                        <li><a href="./pintura_giz_lapis.html">Pintura com giz/lápis de cor</a></li>
+                        <li><a href="./estilos.html">Estilos famosos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p id="txt_footer">Copyright © 2023 - 2023 ArtZ. Todos os direitos reservados. | <a href=""> Termos de
+                    uso</a> | <a href="">Política de privacidade</a> | <a href="">Referências</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    var idSecao = 4;
+
+    carregarComentarios(idSecao);
+
+</script>

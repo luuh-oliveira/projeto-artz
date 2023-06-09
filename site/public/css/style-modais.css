@@ -83,6 +83,12 @@ select {
     border-radius: 8px;
     outline: none; 
     cursor: pointer;
+    transition: 0.7s;
+}
+
+#button_cadastrar:hover {
+    box-shadow: 0 0 5px #ffd65b, 0 0 25px #ffd65b, 0 0 50px #ffd65b;
+    transition: 0.7s;
 }
 
 #button_entrar {
@@ -95,14 +101,14 @@ select {
     border: 1px solid #DFA802;
     border-radius: 8px;
     outline: none;
-    transition: 0.3s;
+    transition: 0.5s;
     cursor: pointer;
 }
 
 #button_entrar:hover {
     background-color: #DFA802;
     color: white;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .links {

@@ -164,6 +164,18 @@ textarea {
     background-image: url('../img/banner-teoria-cores.jpg');
 }
 
+#banner_realismo {
+    background-image: url('../img/banner-realismo.jpg');
+}
+
+#banner_personagens {
+    background-image: url('../img/banner-personagens.jpg');
+}
+
+#banner_traco_textura {
+    background-image: url('../img/banner-traco-textura.jpg');
+}
+
 
 /* navegação */
 
