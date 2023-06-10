@@ -189,19 +189,21 @@ textarea {
 
 .nav_secoes {
     display: flex;
+    position: fixed;
     flex-direction: column;
-    width: 25%;
-    height: auto;
+    width: 23%;
+    height: 100%;
     align-items: center;
     border-left: 2px #EDB91F solid;
     user-select: none;
+    right: 0;
 }
 
 .container_nav {
     display: flex;
     flex-direction: column;
     width: 80%; 
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .lista{ 
@@ -216,7 +218,7 @@ textarea {
     font-size: 1.8vw;
     font-weight: 600;
     color: #EDB91F;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .nav_secoes h4 {
@@ -235,7 +237,7 @@ textarea {
 
 .nav_secoes ul li{
     width: fit-content;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     transition: 0.2s;
 }
 
