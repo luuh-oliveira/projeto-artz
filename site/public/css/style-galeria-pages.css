@@ -203,6 +203,10 @@ textarea {
     background-image: url('../img/banner-traco-textura.jpg');
 }
 
+#banner_aquarela {
+    background-image: url('../img/banner-aquarela.jpg');
+}
+
 
 /* navegação */
 
@@ -245,7 +249,7 @@ textarea {
     font-size: 1.8vw;
     font-weight: 600;
     color: #EDB91F;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
 }
 
 .nav_secoes h4 {

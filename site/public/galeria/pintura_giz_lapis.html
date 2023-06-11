@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style-global.css">
+    <link rel="stylesheet" href="../css/style-galeria-pages.css">
+    <link rel="website icon" type="png" href="../img/icon-logo.png">
+    <script src="../js/funcoes.js"></script>
+    <title>ArtZ | Pintura com giz/lápis de cor</title>
+</head>
+
+<body onload="validarSessao()">
+
+    <div class="header">
+        <div class="container">
+            <div class="header_links">
+                <a class="a_link" href="../index.html">Home</a>
+                <a class="a_link" href="./index.html">Galeria</a>
+            </div>
+            <div class="logo">
+                <img src="../img/logo-artz-branco.png">
+            </div>
+            <div id="div_button" class="header_links">
+                <a class="a_link" href="../sobre-mim.html">Sobre mim</a>
+                <a href="../cadastro.html"><button id="button_cadastro">Faça parte!</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="conteudo_body">
+        <div class="galeria">
+            <div class="banner">
+                <div class="container">
+                    <p>Galeria</p>
+                </div>
+            </div>
+            <div class="conteudo_galeria">
+                <div class="container_conteudo">
+                    <p></p>
+                    <div class="comentarios">
+                        <h3>Comentários</h3>
+                        <div class="comentario_box">
+                            <textarea id="input_comentario"
+                              ></textarea>
+                            <button onclick="comentar(nomeSecao)">Comentar</button>
+                        </div>
+                        <div id="div_comentarios"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav_secoes">
+            <div class="container_nav">
+                <h3>Escolha uma seção</h3>
+                <div class="lista">
+                    <h4>Desenho</h4>
+                    <ul>
+                        <li><a href="./anatomia.html">Anatomia</a></li>
+                        <li><a href="./paisagem.html">Paisagem</a></li>
+                        <li><a href="./personagens.html">Personagens</a></li>
+                        <li><a href="./realismo.html">Realismo</a></li>
+                        <li><a href="./traco_textura.html">Traço e textura</a></li>
+                        <li><a href="./dicas.html">Dicas</a></li>
+                    </ul>
+                </div>
+                <div class="lista">
+                    <h4>Pintura</h4>
+                    <ul>
+                         
+                        <li><a href="./teoria_cores.html">Teoria das cores</a></li>
+                        <li><a href="./aquarela.html">Aquarela</a></li>
+                        <li><a href="./pintura_oleo.html">Pintura a óleo</a></li>
+                        <li><a href="./pintura_giz_lapis.html">Pintura com giz/lápis de cor</a></li>
+                         
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p id="txt_footer">Copyright © 2023 - 2023 ArtZ. Todos os direitos reservados. | <a href=""> Termos de
+                    uso</a> | <a href="">Política de privacidade</a> | <a href="">Referências</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    var nomeSecao = 'Pintura com giz/lápis de cor';
+    
+    carregarComentarios(nomeSecao);
+
+</script>
