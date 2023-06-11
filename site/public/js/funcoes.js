@@ -1,4 +1,4 @@
-function carregarComentarios(idSecao) {
+function carregarComentarios(nomeSecao) {
 
     fetch("/usuarios/carregarComentarios", {
         method: "POST",
@@ -6,7 +6,7 @@ function carregarComentarios(idSecao) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            idSecaoServer: idSecao,
+            nomeSecaoServer: nomeSecao,
         })
     })
         .then(function (resposta) {
@@ -58,7 +58,7 @@ function carregarComentarios(idSecao) {
 
 }
 
-function comentar(idSecao) {
+function comentar(nomeSecao) {
 
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
@@ -78,7 +78,7 @@ function comentar(idSecao) {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    idSecaoServer: idSecao,
+                    nomeSecaoServer: nomeSecao,
                     idUsuarioServer: idUsuario,
                     comentarioServer: comentario
                 })

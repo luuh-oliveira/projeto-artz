@@ -63,6 +63,10 @@
     margin-bottom: 10px;
 }
 
+.topicos p {
+    margin-bottom: 10px;
+}
+
 .img {
     display: flex;
     flex-direction: column;

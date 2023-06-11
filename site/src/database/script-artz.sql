@@ -71,6 +71,13 @@ FROM comentario
     ON fkUsuario = idUsuario
     WHERE fkSecao = 1;
     
+SELECT comentario.*, usuario.nome 
+FROM comentario 
+	JOIN usuario
+		ON fkUsuario = idUsuario
+	WHERE fkSecao = (select idSecao from secao where nome = 'Anatomia');
+
+    
 -- select estilos que já foram escolhidos e quantos usuários os escolheram
 select estilo.nome,
 		count(fkEstilo) as qtdePreferencia
@@ -85,3 +92,5 @@ select count(idComentario) as qtdeComentarios,
 	join secao
 		on idSecao = fkSecao
 	group by fkSecao;
+    
+insert into comentario(fkUsuario, fkSecao, comentario) values (1, (select idSecao from secao where nome = 'Anatomia'), 'Olá mundo')

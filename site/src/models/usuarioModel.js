@@ -45,26 +45,26 @@ function obterDadosAoCarregar() {
 
 }
 
-function comentar(idUsuario, idSecao, comentario) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function comentar():", idUsuario, idSecao, comentario);
+function comentar(idUsuario, nomeSecao, comentario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function comentar():", idUsuario, nomeSecao, comentario);
 
     var instrucao = `
-        INSERT INTO comentario (fkUsuario, fkSecao, comentario) VALUES (${idUsuario}, ${idSecao}, '${comentario}');
+        INSERT INTO comentario (fkUsuario, fkSecao, comentario) VALUES (${idUsuario}, (select idSecao from secao where nome = '${nomeSecao}'), '${comentario}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 
 }
 
-function carregarComentarios(idSecao) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function carregarComentarios():", idSecao);
+function carregarComentarios(nomeSecao) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function carregarComentarios():", nomeSecao);
 
     var instrucao = `
         SELECT comentario.*, usuario.nome 
         FROM comentario 
             JOIN usuario
                 ON fkUsuario = idUsuario
-            WHERE fkSecao = ${idSecao};
+            WHERE fkSecao = (select idSecao from secao where nome = '${nomeSecao}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

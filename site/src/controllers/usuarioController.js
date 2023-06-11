@@ -119,7 +119,7 @@ function obterDadosAoCarregar(req, res) {
 function comentar(req, res) {
 
     var idUsuario = req.body.idUsuarioServer;
-    var idSecao = req.body.idSecaoServer;
+    var nomeSecao = req.body.nomeSecaoServer;
     var comentario = req.body.comentarioServer;
 
     if (idUsuario == undefined) {
@@ -128,7 +128,7 @@ function comentar(req, res) {
         res.status(400).send("Comentário está indefinido!");
     } else {
 
-        usuarioModel.comentar(idUsuario, idSecao, comentario)
+        usuarioModel.comentar(idUsuario, nomeSecao, comentario)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -149,9 +149,9 @@ function comentar(req, res) {
 
 function carregarComentarios(req, res) {
 
-    var idSecao = req.body.idSecaoServer;
+    var nomeSecao = req.body.nomeSecaoServer;
 
-    usuarioModel.carregarComentarios(idSecao)
+    usuarioModel.carregarComentarios(nomeSecao)
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);

@@ -157,7 +157,7 @@
                         <h3>Comentários</h3>
                         <div class="comentario_box">
                             <textarea id="input_comentario"></textarea>
-                            <button onclick="comentar(idSecao)">Comentar</button>
+                            <button onclick="comentar(nomeSecao)">Comentar</button>
                         </div>
                         <div id="div_comentarios"></div>
                     </div>
@@ -206,8 +206,8 @@
 
 <script>
 
-    var idSecao = 2;
+    var nomeSecao = 'Paisagem';
 
-    carregarComentarios(idSecao);
+    carregarComentarios(nomeSecao);
 
 </script>

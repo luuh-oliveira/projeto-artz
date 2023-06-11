@@ -91,7 +91,7 @@
                     <p>
                     <p>No desenho da figura humana, utiliza-se a medida da cabeça como módulo e pode-se dividir em 7
                         partes iguais e meia, ou seja, a cabeça estabelece uma relação de proporção com tronco e as
-                        pernas, como mostra a imagem acima. Para facilitar o processo, confira a <a href="">calculadora
+                        pernas, como mostra a imagem acima. Para facilitar o processo, confira a <a href="#titulo_calculadora">calculadora
                             de
                             anatomia.</a>
                     </p>
@@ -184,7 +184,7 @@
                         <h3>Comentários</h3>
                         <div class="comentario_box">
                             <textarea id="input_comentario"></textarea>
-                            <button onclick="comentar(idSecao)">Comentar</button>
+                            <button onclick="comentar(nomeSecao)">Comentar</button>
                         </div>
                         <div id="div_comentarios"></div>
                     </div>
@@ -233,14 +233,14 @@
 
 <script>
 
-    var idSecao = 1;
+    var nomeSecao = 'Anatomia';
 
     var radioButtons = document.querySelectorAll('input[type="radio"]');
     for (var i = 0; i < radioButtons.length; i++) {
         radioButtons[i].checked = false;
     }
 
-    carregarComentarios(idSecao);
+    carregarComentarios(nomeSecao);
 
     var htmlSelectTipoCorpo = `
     <select id="select_tipo_corpo">

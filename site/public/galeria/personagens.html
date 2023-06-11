@@ -43,7 +43,68 @@
             </div>
             <div class="conteudo_galeria">
                 <div class="container_conteudo">
-                    <p></p>
+                    <p>Entre uma das coisas que mais gosto de desenhar, estão meus personagens favoritos. Por isso, essa
+                        seção vai falar um pouco sobre algumas dicas para desenhar qualquer personagem que você queira.
+                    </p>
+
+                    <h2>Por onde começar?</h2>
+                    <ul class="topicos">
+                        <li>Pesquise referências: Antes de começar a desenhar um personagem, pesquise referências
+                            relacionadas ao estilo, idade, gênero e características físicas que você deseja retratar.
+                            Estude imagens de pessoas reais, personagens de desenhos animados, quadrinhos ou ilustrações
+                            para ajudar a desenvolver ideias e obter inspiração.
+                        </li>
+                        <p>
+                            De início, você pode pegar exatamente a imagem que deseja desenhar, e conforme for ganhando
+                            prática, ir mesclando com outras imagens ou ideias, até conseguir desenhar sem uma
+                            referência específica.
+                        </p>
+                        <li>Crie esboços básicos: Comece com esboços simples para estabelecer a pose e a forma geral do
+                            personagem. Use formas geométricas básicas, como círculos, retângulos e linhas, para
+                            construir a estrutura inicial do corpo e das partes principais, como cabeça, tronco, braços
+                            e pernas. Isso ajudará a estabelecer a proporção e a postura corretas.</li>
+                        <p>
+                            Para aqueles que estão começando, uma coisa que me ajudou foi decalcar imagens de
+                            personagens que eu gostaria de desenhar, assim eu conseguia pegar os traços mais facilmente
+                            até conseguir desenhar sem depender do decalque.
+                        </p>
+                        <li>Detalhe o rosto e as expressões: O rosto é uma parte crucial na criação de um personagem
+                            expressivo. Desenvolva os olhos, nariz, boca e orelhas com detalhes, considerando o formato
+                            do rosto e a idade do personagem. Explore diferentes expressões faciais para transmitir
+                            emoções e personalidade.</li>
+                        <li>Dê atenção aos cabelos e penteados: Os cabelos desempenham um papel importante na
+                            caracterização do personagem. Considere a textura, o estilo e a cor dos cabelos para
+                            refletir a personalidade e o estilo do personagem. Crie diferentes penteados e experimente
+                            técnicas para representar os cabelos de maneira realista ou estilizada.</li>
+                        <li>Vista o personagem: A escolha do vestuário e dos acessórios pode ajudar a contar a história
+                            do personagem. Pense na época, no ambiente e na personalidade do personagem ao selecionar
+                            roupas e adereços. Adicione detalhes como padrões, botões, bolsos e outros elementos que
+                            complementem a aparência do personagem.</li>
+                        <li>Brinque com proporções e estilos: Não tenha medo de brincar com as proporções e experimentar
+                            estilos diferentes. Você pode criar personagens com corpos alongados, cabeças grandes, olhos
+                            exagerados ou outras características distintas. Isso ajudará a criar personagens únicos e
+                            interessantes.</li>
+                        <li>Pratique anatomia: Ter uma compreensão básica de anatomia humana é essencial para desenhar
+                            personagens convincentes. Estude a estrutura do corpo, os músculos, as articulações e a
+                            proporção correta das diferentes partes do corpo. A prática constante da anatomia irá
+                            melhorar sua capacidade de desenhar personagens.</li>
+                        <li>Explore expressões corporais: Além das expressões faciais, preste atenção nas expressões
+                            corporais e na linguagem gestual do personagem. Isso pode transmitir emoções, atitudes e
+                            características específicas. Observe a postura, os gestos das mãos e a posição dos braços e
+                            pernas para adicionar mais vida ao seu desenho.</li>
+                        <li>Use a psicologia das cores: As cores podem transmitir emoções e informações sobre o
+                            personagem. Experimente diferentes paletas de cores para refletir a personalidade, o
+                            ambiente ou o contexto do personagem. Use a psicologia das cores para transmitir emoções
+                            específicas através das cores utilizadas.</li>
+                        <li>Pratique e experimente: Desenhar personagens requer prática e experimentação contínuas.
+                            Dedique tempo regularmente para desenvolver suas habilidades e explore diferentes estilos,
+                            técnicas e mídias de desenho. Não tenha medo de cometer erros e aprender com eles, pois isso
+                            faz parte do processo de crescimento como artista.</li>
+                    </ul>
+                    <h2>Processos</h2>
+                    <p>
+                        
+                    </p>
                     <div class="img">
                         <img src="../img/gif-charlotte.gif" autoplay>
                         <p class="legenda">Processo do desenho - Charlotte Wiltshire</p>
@@ -51,9 +112,8 @@
                     <div class="comentarios">
                         <h3>Comentários</h3>
                         <div class="comentario_box">
-                            <textarea id="input_comentario"
-                              ></textarea>
-                            <button onclick="comentar(idSecao)">Comentar</button>
+                            <textarea id="input_comentario"></textarea>
+                            <button onclick="comentar(nomeSecao)">Comentar</button>
                         </div>
                         <div id="div_comentarios"></div>
                     </div>
@@ -82,7 +142,7 @@
                         <li><a href="./aquarela.html">Aquarela</a></li>
                         <li><a href="./pintura_oleo.html">Pintura a óleo</a></li>
                         <li><a href="./pintura_giz_lapis.html">Pintura com giz/lápis de cor</a></li>
-                         
+
                     </ul>
                 </div>
             </div>
@@ -102,8 +162,8 @@
 
 <script>
 
-    var idSecao = 3;
-    
-    carregarComentarios(idSecao);
+    var nomeSecao = 'Personagens';
+
+    carregarComentarios(nomeSecao);
 
 </script>
