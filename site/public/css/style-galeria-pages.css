@@ -58,6 +58,11 @@
     user-select: none;
 }
 
+.topicos {
+    display: flex;
+    flex-direction: column;
+}
+
 .topicos li {
     list-style: inside;
     margin-bottom: 10px;
@@ -69,6 +74,8 @@
 
 .img {
     display: flex;
+    width: fit-content;
+    align-self: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,11 +86,22 @@
 .img img {
     max-height: 70vh;
     max-width: 60vw;
+    transition: transform 0.3s ease;
 }
+
+.img img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.img:hover .legenda {
+    transform: translateY(20px); /* Define o valor de deslocamento vertical da legenda */
+}  
 
 .img .legenda {
     font-size: 1rem;
     margin-top: 8px;
+    transition: transform 0.3s ease;
 }
 
 /* comentários */
