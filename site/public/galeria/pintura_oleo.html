@@ -36,19 +36,56 @@
 
     <div class="conteudo_body">
         <div class="galeria">
-            <div class="banner">
+            <div id="banner_pintura_oleo" class="banner">
                 <div class="container">
-                    <p>Galeria</p>
+                    <p>Pintura a óleo</p>
                 </div>
             </div>
             <div class="conteudo_galeria">
                 <div class="container_conteudo">
-                    <p></p>
+                    <p>A pintura a óleo é uma forma clássica e expressiva de arte que utiliza tintas a óleo para criar
+                        obras de arte ricas em textura e cor. Ela possui versatilidade e capacidade de produzir efeitos impressionantes.
+                    </p>
+                    <p>As tintas a óleo são compostas por pigmentos moídos misturados com um óleo de secagem lenta, como
+                        o óleo de linhaça. Essa composição permite que as tintas sejam aplicadas com facilidade e
+                        manipuladas durante o processo de pintura.</p>
+
+                    <h2>Passos na pintura a óleo</h2>
+                    <ul class="topicos">
+                        <li>Preparação da superfície: Antes de iniciar sua pintura, certifique-se de que a superfície
+                            esteja preparada corretamente. Isso pode incluir o uso de um primer ou a aplicação de uma
+                            camada de tinta base para criar uma superfície uniforme e durável.</li>
+                        <li>Pincéis e paleta de cores: Escolha pincéis de boa qualidade adequados para pintura a óleo,
+                            como pincéis de cerdas naturais. Tenha uma variedade de tamanhos para diferentes detalhes e
+                            técnicas. Além disso, monte uma paleta de cores com uma seleção de tintas a óleo, incluindo
+                            cores primárias, secundárias e tons neutros.</li>
+                        <li>Camadas e sobreposição de cores: Uma das características distintivas da pintura a óleo é a
+                            capacidade de criar camadas de cores sobrepostas. Comece com uma camada base e, em seguida,
+                            adicione camadas adicionais para criar profundidade e textura. Deixe cada camada secar antes
+                            de aplicar a próxima.</li>
+                        <li>Esfumado e mistura de cores: A tinta a óleo permite uma excelente capacidade de mistura e
+                            esfumado. Use pinceladas suaves e circulares para misturar as cores diretamente na tela.
+                            Experimente criar gradientes e transições suaves para dar vida às suas obras de arte.</li>
+                        <li>Texturas e impastos: A tinta a óleo também pode ser aplicada em camadas mais espessas para
+                            criar texturas e efeitos tridimensionais. Essa técnica, conhecida como impasto, pode ser
+                            usada para destacar áreas ou adicionar detalhes texturizados em sua pintura.</li>
+                        <li>Tempo de secagem: As tintas a óleo têm um tempo de secagem mais lento em comparação com
+                            outras mídias. Leve isso em consideração ao planejar sua pintura e evitar misturar cores
+                            diretamente na tela quando necessário. Dê tempo para que cada camada seque completamente
+                            antes de aplicar outras camadas ou fazer ajustes.</li>
+                        <li>Experimentação e prática: A pintura a óleo é uma técnica que requer prática e experimentação
+                            para dominar. Reserve tempo para explorar diferentes técnicas, materiais e estilos. A cada
+                            pintura, você irá adquirir mais experiência e aprimorar suas habilidades.</li>
+                    </ul>
+
+                    <p>A pintura a óleo oferece uma ampla gama de possibilidades artísticas, permitindo que você crie
+                        obras de arte com textura, profundidade e expressão. Explore as técnicas mencionadas e
+                        desenvolva seu próprio estilo único com a pintura a óleo. Com dedicação e prática, você poderá
+                        criar pinturas impactantes e cheias de vida.</p>
                     <div class="comentarios">
                         <h3>Comentários</h3>
                         <div class="comentario_box">
-                            <textarea id="input_comentario"
-                              ></textarea>
+                            <textarea id="input_comentario"></textarea>
                             <button onclick="comentar(nomeSecao)">Comentar</button>
                         </div>
                         <div id="div_comentarios"></div>
@@ -73,12 +110,12 @@
                 <div class="lista">
                     <h4>Pintura</h4>
                     <ul>
-                         
+
                         <li><a href="./teoria_cores.html">Teoria das cores</a></li>
                         <li><a href="./aquarela.html">Aquarela</a></li>
                         <li><a href="./pintura_oleo.html">Pintura a óleo</a></li>
                         <li><a href="./pintura_giz_lapis.html">Pintura com giz/lápis de cor</a></li>
-                         
+
                     </ul>
                 </div>
             </div>
@@ -99,7 +136,7 @@
 <script>
 
     var nomeSecao = 'Pintura a óleo';
-    
+
     carregarComentarios(nomeSecao);
 
 </script>

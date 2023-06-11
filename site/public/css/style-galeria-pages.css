@@ -114,6 +114,7 @@
 
 .comentario_box {
     display: flex;
+    align-items: center;
     margin-left: 5px;
     gap: 1%;
     user-select: none;
@@ -121,7 +122,7 @@
 
 textarea {
     width: 85%;
-    height: 35px;
+    height: 50px;
     font-size: 1.1vw;
     padding-left: 5px;
     padding-top: 5px;
@@ -130,6 +131,7 @@ textarea {
 }
 
 .comentario_box button {
+    height: 80%;
     padding: 10px 10px;
     background-color: #EDB91F;
     color: white;
@@ -207,6 +209,13 @@ textarea {
     background-image: url('../img/banner-aquarela.jpg');
 }
 
+#banner_pintura_oleo {
+    background-image: url('../img/banner-pintura-oleo.jpg');
+}
+
+#banner_giz_lapis {
+    background-image: url('../img/banner-giz-lapis.jpg');
+}
 
 /* navegação */
 
