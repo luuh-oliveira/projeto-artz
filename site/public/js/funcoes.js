@@ -114,8 +114,6 @@ function comentar(nomeSecao) {
 // sessão
 function validarSessao() {
 
-    console.log("tá validando essa bagaça");
-
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
 
